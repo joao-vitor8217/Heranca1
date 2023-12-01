@@ -1,1 +1,76 @@
+public class Pessoa {
+	private String nome;
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	
+
+}
+
+public class PessoaFisica extends Pessoa {
+	private int CPF;
+
+	public int getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(int cPF) {
+		CPF = cPF;
+	}
+	
+	public void apresentar() {
+		System.out.println("---------------");
+		System.out.println("Nome : " + this.getNome());
+		System.out.println("CPF: " + this.getCPF());
+		System.out.println("---------------");
+	}
+
+}
+
+public class PessoaJuridica extends Pessoa {
+	private int CNPJ;
+
+	public int getCNPJ() {
+		return CNPJ;
+	}
+
+	public void setCNPJ(int cNPJ) {
+		CNPJ = cNPJ;
+	}
+	
+	public void apresentar() {
+		System.out.println("---------------");
+		System.out.println("Nome : " + this.getNome());
+		System.out.println("CNPJ: " + this.getCNPJ());
+		System.out.println("---------------");
+	}
+
+}
+
+public class Cadastro {
+	public static void main(String[] args) {
+		
+		PessoaFisica pf1 = new PessoaFisica();
+		
+		pf1.setNome("Joao");
+		pf1.setCPF(123456789);
+		
+		pf1.apresentar();
+		
+		PessoaJuridica pj1 = new PessoaJuridica();
+		
+		pj1.setNome("Carlos");
+		pj1.setCNPJ(123456789);
+		
+		pj1.apresentar();
+		
+	
+	}
+
+}
